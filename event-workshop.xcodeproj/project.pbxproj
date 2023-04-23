@@ -7,23 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071C3DF629F22A30006BC75B /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C3DF529F22A30006BC75B /* EventService.swift */; };
+		071C3DFD29F22A8F006BC75B /* EventBodyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C3DFC29F22A8F006BC75B /* EventBodyResponse.swift */; };
+		071C3DFF29F2DE92006BC75B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C3DFE29F2DE92006BC75B /* Config.swift */; };
+		071C3E0129F34E92006BC75B /* PerformerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C3E0029F34E92006BC75B /* PerformerItemView.swift */; };
+		071C3E0329F3672C006BC75B /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C3E0229F3672C006BC75B /* EventDetail.swift */; };
+		071C3E0529F44A3B006BC75B /* PerformerImagesHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C3E0429F44A3B006BC75B /* PerformerImagesHView.swift */; };
+		072AB80329EB64650040B86B /* Performer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072AB80229EB64650040B86B /* Performer.swift */; };
+		072AB80529EB71A40040B86B /* SearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072AB80429EB71A40040B86B /* SearchInputView.swift */; };
+		072AB80729EB7DD40040B86B /* EventItemVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072AB80629EB7DD40040B86B /* EventItemVView.swift */; };
+		076DE1CA29ED74A2002CC15C /* FilterEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE1C929ED74A1002CC15C /* FilterEventView.swift */; };
+		076DE1CC29EDD7F6002CC15C /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE1CB29EDD7F5002CC15C /* CategoryFilterView.swift */; };
+		07D2B4AF29EEB74F00C19FE7 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D2B4AE29EEB74F00C19FE7 /* MockData.swift */; };
 		07E4EE6529E6AE9A00FCC76D /* event_workshopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE6429E6AE9A00FCC76D /* event_workshopApp.swift */; };
-		07E4EE6729E6AE9A00FCC76D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE6629E6AE9A00FCC76D /* ContentView.swift */; };
 		07E4EE6929E6AE9D00FCC76D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E4EE6829E6AE9D00FCC76D /* Assets.xcassets */; };
 		07E4EE6C29E6AE9D00FCC76D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E4EE6B29E6AE9D00FCC76D /* Preview Assets.xcassets */; };
-		07E4EE6E29E6AE9D00FCC76D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE6D29E6AE9D00FCC76D /* Persistence.swift */; };
 		07E4EE7129E6AE9D00FCC76D /* event_workshop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE6F29E6AE9D00FCC76D /* event_workshop.xcdatamodeld */; };
+		07E4EE8129E803A400FCC76D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE8029E803A400FCC76D /* HomeView.swift */; };
+		07E4EE8329E803B200FCC76D /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE8229E803B200FCC76D /* EventDetailView.swift */; };
+		07E4EE8529E804F400FCC76D /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE8429E804F400FCC76D /* EventViewModel.swift */; };
+		07E4EE8929E8055200FCC76D /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE8829E8055200FCC76D /* Styles.swift */; };
+		07E4EE8B29E8059000FCC76D /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE8A29E8059000FCC76D /* Consts.swift */; };
+		07E4EE8D29E8077300FCC76D /* AllEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE8C29E8077300FCC76D /* AllEventsView.swift */; };
+		07E4EE9029E8161A00FCC76D /* EventItemHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE8F29E8161A00FCC76D /* EventItemHView.swift */; };
+		07E4EE9229E81E2000FCC76D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4EE9129E81E2000FCC76D /* Event.swift */; };
+		07E4EE9C29E9537E00FCC76D /* AirbnbCereal_W_Md.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07E4EE9529E9537D00FCC76D /* AirbnbCereal_W_Md.otf */; };
+		07E4EE9D29E9537E00FCC76D /* AirbnbCereal_W_Bk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07E4EE9629E9537D00FCC76D /* AirbnbCereal_W_Bk.otf */; };
+		07E4EE9E29E9537E00FCC76D /* AirbnbCereal_W_Blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07E4EE9729E9537D00FCC76D /* AirbnbCereal_W_Blk.otf */; };
+		07E4EE9F29E9537E00FCC76D /* AirbnbCereal_W_Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07E4EE9829E9537E00FCC76D /* AirbnbCereal_W_Bd.otf */; };
+		07E4EEA029E9537E00FCC76D /* AirbnbCereal_W_Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07E4EE9929E9537E00FCC76D /* AirbnbCereal_W_Lt.otf */; };
+		07E6D8AD29EE175E0064FBEE /* TimeDateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6D8AC29EE175E0064FBEE /* TimeDateFilterView.swift */; };
+		07E7C61529F4C3FD0038B551 /* LocalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7C61429F4C3FD0038B551 /* LocalPreferences.swift */; };
+		07E7C61729F4E9300038B551 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7C61629F4E9300038B551 /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071C3DF529F22A30006BC75B /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		071C3DFC29F22A8F006BC75B /* EventBodyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBodyResponse.swift; sourceTree = "<group>"; };
+		071C3DFE29F2DE92006BC75B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		071C3E0029F34E92006BC75B /* PerformerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformerItemView.swift; sourceTree = "<group>"; };
+		071C3E0229F3672C006BC75B /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		071C3E0429F44A3B006BC75B /* PerformerImagesHView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformerImagesHView.swift; sourceTree = "<group>"; };
+		072AB80229EB64650040B86B /* Performer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performer.swift; sourceTree = "<group>"; };
+		072AB80429EB71A40040B86B /* SearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInputView.swift; sourceTree = "<group>"; };
+		072AB80629EB7DD40040B86B /* EventItemVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItemVView.swift; sourceTree = "<group>"; };
+		076DE1C929ED74A1002CC15C /* FilterEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEventView.swift; sourceTree = "<group>"; };
+		076DE1CB29EDD7F5002CC15C /* CategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterView.swift; sourceTree = "<group>"; };
+		07D2B4AE29EEB74F00C19FE7 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		07E4EE6129E6AE9A00FCC76D /* event-workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "event-workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E4EE6429E6AE9A00FCC76D /* event_workshopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event_workshopApp.swift; sourceTree = "<group>"; };
-		07E4EE6629E6AE9A00FCC76D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07E4EE6829E6AE9D00FCC76D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07E4EE6B29E6AE9D00FCC76D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		07E4EE6D29E6AE9D00FCC76D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		07E4EE7029E6AE9D00FCC76D /* event_workshop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = event_workshop.xcdatamodel; sourceTree = "<group>"; };
-		07E4EE7229E6AE9D00FCC76D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07E4EE8029E803A400FCC76D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		07E4EE8229E803B200FCC76D /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		07E4EE8429E804F400FCC76D /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		07E4EE8829E8055200FCC76D /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		07E4EE8A29E8059000FCC76D /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		07E4EE8C29E8077300FCC76D /* AllEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsView.swift; sourceTree = "<group>"; };
+		07E4EE8F29E8161A00FCC76D /* EventItemHView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItemHView.swift; sourceTree = "<group>"; };
+		07E4EE9129E81E2000FCC76D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		07E4EE9529E9537D00FCC76D /* AirbnbCereal_W_Md.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Md.otf; sourceTree = "<group>"; };
+		07E4EE9629E9537D00FCC76D /* AirbnbCereal_W_Bk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Bk.otf; sourceTree = "<group>"; };
+		07E4EE9729E9537D00FCC76D /* AirbnbCereal_W_Blk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Blk.otf; sourceTree = "<group>"; };
+		07E4EE9829E9537E00FCC76D /* AirbnbCereal_W_Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Bd.otf; sourceTree = "<group>"; };
+		07E4EE9929E9537E00FCC76D /* AirbnbCereal_W_Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Lt.otf; sourceTree = "<group>"; };
+		07E4EEA329EB453700FCC76D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		07E6D8AC29EE175E0064FBEE /* TimeDateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDateFilterView.swift; sourceTree = "<group>"; };
+		07E7C61429F4C3FD0038B551 /* LocalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPreferences.swift; sourceTree = "<group>"; };
+		07E7C61629F4E9300038B551 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071C3DFA29F22A6F006BC75B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				071C3DFB29F22A7B006BC75B /* response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		071C3DFB29F22A7B006BC75B /* response */ = {
+			isa = PBXGroup;
+			children = (
+				071C3DFC29F22A8F006BC75B /* EventBodyResponse.swift */,
+			);
+			path = response;
+			sourceTree = "<group>";
+		};
 		07E4EE5829E6AE9A00FCC76D = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +124,14 @@
 		07E4EE6329E6AE9A00FCC76D /* event-workshop */ = {
 			isa = PBXGroup;
 			children = (
+				07E4EEA329EB453700FCC76D /* Info.plist */,
+				07E4EE9329E9534B00FCC76D /* fonts */,
+				07E4EE7829E6B2E300FCC76D /* Data */,
+				07E4EE7929E6B2EA00FCC76D /* ViewModel */,
+				07E4EE7A29E6B31700FCC76D /* UI */,
+				07E4EE8729E8054000FCC76D /* Util */,
 				07E4EE6429E6AE9A00FCC76D /* event_workshopApp.swift */,
-				07E4EE6629E6AE9A00FCC76D /* ContentView.swift */,
 				07E4EE6829E6AE9D00FCC76D /* Assets.xcassets */,
-				07E4EE6D29E6AE9D00FCC76D /* Persistence.swift */,
-				07E4EE7229E6AE9D00FCC76D /* Info.plist */,
 				07E4EE6F29E6AE9D00FCC76D /* event_workshop.xcdatamodeld */,
 				07E4EE6A29E6AE9D00FCC76D /* Preview Content */,
 			);
@@ -73,6 +144,93 @@
 				07E4EE6B29E6AE9D00FCC76D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07E4EE7829E6B2E300FCC76D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				071C3DFA29F22A6F006BC75B /* Model */,
+				07E4EE7C29E6B34500FCC76D /* Local */,
+				07D2B4AE29EEB74F00C19FE7 /* MockData.swift */,
+				071C3DF529F22A30006BC75B /* EventService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		07E4EE7929E6B2EA00FCC76D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07E4EE8429E804F400FCC76D /* EventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		07E4EE7A29E6B31700FCC76D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				07E4EE7B29E6B33B00FCC76D /* Model */,
+				07E4EE8E29E80EA500FCC76D /* Widgets */,
+				07E4EE8029E803A400FCC76D /* HomeView.swift */,
+				07E4EE8229E803B200FCC76D /* EventDetailView.swift */,
+				07E4EE8C29E8077300FCC76D /* AllEventsView.swift */,
+				076DE1C929ED74A1002CC15C /* FilterEventView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		07E4EE7B29E6B33B00FCC76D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07E4EE9129E81E2000FCC76D /* Event.swift */,
+				072AB80229EB64650040B86B /* Performer.swift */,
+				071C3E0229F3672C006BC75B /* EventDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07E4EE7C29E6B34500FCC76D /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				07E7C61429F4C3FD0038B551 /* LocalPreferences.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		07E4EE8729E8054000FCC76D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				07E4EE8829E8055200FCC76D /* Styles.swift */,
+				07E4EE8A29E8059000FCC76D /* Consts.swift */,
+				071C3DFE29F2DE92006BC75B /* Config.swift */,
+				07E7C61629F4E9300038B551 /* extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		07E4EE8E29E80EA500FCC76D /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				07E4EE8F29E8161A00FCC76D /* EventItemHView.swift */,
+				072AB80429EB71A40040B86B /* SearchInputView.swift */,
+				072AB80629EB7DD40040B86B /* EventItemVView.swift */,
+				076DE1CB29EDD7F5002CC15C /* CategoryFilterView.swift */,
+				07E6D8AC29EE175E0064FBEE /* TimeDateFilterView.swift */,
+				071C3E0029F34E92006BC75B /* PerformerItemView.swift */,
+				071C3E0429F44A3B006BC75B /* PerformerImagesHView.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		07E4EE9329E9534B00FCC76D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				07E4EE9829E9537E00FCC76D /* AirbnbCereal_W_Bd.otf */,
+				07E4EE9629E9537D00FCC76D /* AirbnbCereal_W_Bk.otf */,
+				07E4EE9729E9537D00FCC76D /* AirbnbCereal_W_Blk.otf */,
+				07E4EE9929E9537E00FCC76D /* AirbnbCereal_W_Lt.otf */,
+				07E4EE9529E9537D00FCC76D /* AirbnbCereal_W_Md.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +291,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E4EE9D29E9537E00FCC76D /* AirbnbCereal_W_Bk.otf in Resources */,
+				07E4EE9C29E9537E00FCC76D /* AirbnbCereal_W_Md.otf in Resources */,
 				07E4EE6C29E6AE9D00FCC76D /* Preview Assets.xcassets in Resources */,
+				07E4EEA029E9537E00FCC76D /* AirbnbCereal_W_Lt.otf in Resources */,
 				07E4EE6929E6AE9D00FCC76D /* Assets.xcassets in Resources */,
+				07E4EE9F29E9537E00FCC76D /* AirbnbCereal_W_Bd.otf in Resources */,
+				07E4EE9E29E9537E00FCC76D /* AirbnbCereal_W_Blk.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +308,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E4EE6E29E6AE9D00FCC76D /* Persistence.swift in Sources */,
+				071C3DFD29F22A8F006BC75B /* EventBodyResponse.swift in Sources */,
+				07E4EE8D29E8077300FCC76D /* AllEventsView.swift in Sources */,
+				076DE1CC29EDD7F6002CC15C /* CategoryFilterView.swift in Sources */,
 				07E4EE7129E6AE9D00FCC76D /* event_workshop.xcdatamodeld in Sources */,
-				07E4EE6729E6AE9A00FCC76D /* ContentView.swift in Sources */,
+				072AB80529EB71A40040B86B /* SearchInputView.swift in Sources */,
+				07E4EE8329E803B200FCC76D /* EventDetailView.swift in Sources */,
+				07E7C61729F4E9300038B551 /* extensions.swift in Sources */,
+				07E4EE9229E81E2000FCC76D /* Event.swift in Sources */,
+				07E4EE8929E8055200FCC76D /* Styles.swift in Sources */,
+				071C3E0329F3672C006BC75B /* EventDetail.swift in Sources */,
+				07E6D8AD29EE175E0064FBEE /* TimeDateFilterView.swift in Sources */,
+				07E4EE9029E8161A00FCC76D /* EventItemHView.swift in Sources */,
+				072AB80329EB64650040B86B /* Performer.swift in Sources */,
+				07E4EE8129E803A400FCC76D /* HomeView.swift in Sources */,
+				072AB80729EB7DD40040B86B /* EventItemVView.swift in Sources */,
+				07D2B4AF29EEB74F00C19FE7 /* MockData.swift in Sources */,
+				071C3E0529F44A3B006BC75B /* PerformerImagesHView.swift in Sources */,
+				07E7C61529F4C3FD0038B551 /* LocalPreferences.swift in Sources */,
+				07E4EE8529E804F400FCC76D /* EventViewModel.swift in Sources */,
+				071C3E0129F34E92006BC75B /* PerformerItemView.swift in Sources */,
+				071C3DF629F22A30006BC75B /* EventService.swift in Sources */,
+				071C3DFF29F2DE92006BC75B /* Config.swift in Sources */,
 				07E4EE6529E6AE9A00FCC76D /* event_workshopApp.swift in Sources */,
+				076DE1CA29ED74A2002CC15C /* FilterEventView.swift in Sources */,
+				07E4EE8B29E8059000FCC76D /* Consts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -259,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,11 +464,13 @@
 				DEVELOPMENT_TEAM = 4C5F8AB48L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "event-workshop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,11 +495,13 @@
 				DEVELOPMENT_TEAM = 4C5F8AB48L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "event-workshop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

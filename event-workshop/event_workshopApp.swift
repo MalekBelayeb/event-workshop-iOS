@@ -9,12 +9,20 @@ import SwiftUI
 
 @main
 struct event_workshopApp: App {
-    let persistenceController = PersistenceController.shared
-
+    
+    @StateObject var eventViewModel = EventViewModel(eventService: EventService())
+    
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
+            NavigationView{
+                
+                HomeView(eventViewModel: eventViewModel)
+                
+            }
+            
         }
+        
     }
 }
