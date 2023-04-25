@@ -14,7 +14,7 @@ struct AllEventsView: View {
     @ObservedObject var eventViewModel:EventViewModel
     
     @State var showErrorAlert : Bool = false
-    
+
     var body: some View {
         
         VStack
@@ -57,23 +57,42 @@ struct AllEventsView: View {
                     
             }else if self.eventViewModel.getAllUpcomingEventsState == .success {
                    
-                   
                    ScrollView
                    {
                        
-                       VStack(spacing:16)
+                       ScrollViewReader
                        {
-                        
+                           reader in
                            
-                           ForEach(self.eventViewModel.allUpcomingEvents)
+                           
+                           LazyVStack(spacing:16)
                            {
+                            
                                
-                               event in
+                               ForEach(self.eventViewModel.allUpcomingEvents)
+                               {
+                                   
+                                   event in
+                                   
+                                   EventItemVView(event: event).id(event.id).onAppear{
+                                       
+                                       if self.eventViewModel.allUpcomingEvents.last?.id == event.id
+                                       {
+                                           self.eventViewModel.allEventCurrentPage += 1
+                                       }
+                                       
+                                   }
+                                   
+                               }
                                
-                               EventItemVView(event: event)
+                           }.onReceive(self.eventViewModel.$allUpcomingEvents)
+                           {
+                               newVal in
+                               
+                               
+                               reader.scrollTo(newVal[(self.eventViewModel.allEventCurrentPage - 1) * 10].id)
                                
                            }
-                           
                            
                        }
                    }

@@ -46,6 +46,7 @@ class EventViewModel:ObservableObject
     @Published var getEventByIdState:GetEventByIdState = .loading
     @Published var eventDetail:EventDetail = EventDetail()
     
+    @Published var allEventCurrentPage:Int = 1 
     
     @Published var selectedCategories: [CategoriesFilterType] = [.All]
     @Published var selectedDateFilter:DateTimeFilterType = .Today
@@ -68,7 +69,7 @@ class EventViewModel:ObservableObject
         
         self.getSavedFilters()
         self.updateFilters()
-        
+        self.onPageChanged()
     }
     
     
@@ -91,6 +92,20 @@ class EventViewModel:ObservableObject
         
     }
     
+    
+    func onPageChanged()
+    {
+        
+        self.$allEventCurrentPage.dropFirst().sink{
+            page in
+            
+            //print(page)
+            
+            self.getAllUpcomingEvents(page: page)
+            
+        }.store(in: &cancellableSet)
+        
+    }
     
     func updateFilters()
     {
@@ -204,7 +219,7 @@ class EventViewModel:ObservableObject
                 DispatchQueue.main.async {
                       
                     
-                    self.allUpcomingEvents = results.events.map{
+                    let events = results.events.map{
                         
                         value in
                     
@@ -224,7 +239,7 @@ class EventViewModel:ObservableObject
                         
                     }
                   
-                    
+                    self.allUpcomingEvents.append(contentsOf: events)
                     
                     self.getAllUpcomingEventsState = self.allUpcomingEvents.isEmpty ? .emptyList : .success
                     

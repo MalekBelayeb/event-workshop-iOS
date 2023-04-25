@@ -120,7 +120,7 @@ struct HomeView: View {
                                         
                                     }else{
                                         
-                                        HStack(spacing:0)
+                                        LazyHStack(spacing:0)
                                         {
                                             
                                             ForEach(self.eventViewModel.upcomingEvents) { event in
@@ -188,7 +188,7 @@ struct HomeView: View {
                                         
                                     }else{
                                         
-                                        HStack(spacing:0)
+                                        LazyHStack(spacing:0)
                                         {
                                             
                                             ForEach(self.eventViewModel.upcomingEvents)
