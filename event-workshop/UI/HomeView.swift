@@ -17,6 +17,9 @@ struct HomeView: View {
     
     @State var showBottomSheet:Bool = false
     
+    @FocusState var isSearchFocused:Bool
+    
+    @StateObject var locationManager:LocationDataManager = LocationDataManager()
     
     @ObservedObject var eventViewModel: EventViewModel 
     
@@ -37,7 +40,7 @@ struct HomeView: View {
                     VStack
                     {
                         
-                        SearchInputView(searchValue: $searchValue).padding([.horizontal,.top],16)
+                        SearchInputView(searchValue: $searchValue,searchValueIsFocused: $isSearchFocused).padding([.horizontal,.top],16)
                         
                         VStack(spacing:32){
                           
@@ -72,140 +75,145 @@ struct HomeView: View {
                                 
                             }.padding(.horizontal,16)
                             
-                            VStack(spacing:4)
+                            
+                            if !self.isSearchFocused
                             {
-                                
-                                HStack
+                                VStack(spacing:4)
                                 {
                                     
-                                    
-                                    Text("Upcoming Events").font(.custom(Fonts.airbnbCereal_medium, size: 18)).foregroundColor(Style.black)
-                                    
-                                    Spacer()
-                                    
-                                    Button
+                                    HStack
                                     {
                                         
-                                        self.navToAllEvents = true
                                         
-                                    }label: {
-                                    
-                                        HStack(spacing: 4)
+                                        Text("Upcoming Events").font(.custom(Fonts.airbnbCereal_medium, size: 18)).foregroundColor(Style.black)
+                                        
+                                        Spacer()
+                                        
+                                        Button
                                         {
                                             
-                                            Text("See All").font(.custom(Fonts.airbnbCereal_book, size: 16)).foregroundColor(Style.grey4)
+                                            self.navToAllEvents = true
                                             
-                                            Image("right-arrow-ic").resizable().scaledToFill().frame(width: 8,height: 8)
+                                        }label: {
+                                        
+                                            HStack(spacing: 4)
+                                            {
+                                                
+                                                Text("See All").font(.custom(Fonts.airbnbCereal_book, size: 16)).foregroundColor(Style.grey4)
+                                                
+                                                Image("right-arrow-ic").resizable().scaledToFill().frame(width: 8,height: 8)
+                                                
+                                            }
+                                            
+                                        }
+                                        
+                                    }.padding(.horizontal,16)
+                                    
+                                    ScrollView(.horizontal,showsIndicators: false)
+                                    {
+                                        
+                                        if self.eventViewModel.upcomingEventsIsLoading
+                                        {
+                                            
+                                            HStack
+                                            {
+                                                
+                                                Spacer()
+                                                ProgressView()
+                                                Spacer()
+                                                
+                                            }.frame(width: geo.size.width,height:200)
+                                            
+                                        }else{
+                                            
+                                            LazyHStack(spacing:0)
+                                            {
+                                                
+                                                ForEach(self.eventViewModel.upcomingEvents) { event in
+                                                    
+                                                    EventItemHView(width:geo.size.width * 0.7, event: event, eventViewModel: self.eventViewModel)
+                                                    
+                                                }
+                                        
+                                            }.padding(.vertical,16)
+                                            
+                                            
+                                        }
+                                      
+                                    }
+                                    
+                                    
+                                }
+                                
+                                VStack(spacing:4)
+                                {
+                                    
+                                    HStack
+                                    {
+                                        
+                                        Text("Nearby You").font(.custom(Fonts.airbnbCereal_medium, size: 18)).foregroundColor(Style.black)
+                                        
+                                        Spacer()
+                                        
+                                        Button
+                                        {
+                                            
+                                            self.navToAllEvents = true
+                                            
+                                        }label: {
+                                            
+                                            HStack(spacing: 4)
+                                            {
+                                                
+                                                Text("See All").font(.custom(Fonts.airbnbCereal_book, size: 16)).foregroundColor(Style.grey4)
+                                                
+                                                Image("right-arrow-ic").resizable().scaledToFill().frame(width: 8,height: 8)
+                                                
+                                            }
+                                            
+                                        }
+                                        
+                                    }.padding(.horizontal,16)
+                                    
+                                    ScrollView(.horizontal,showsIndicators: false)
+                                    {
+                                        
+                                        
+                                        if self.eventViewModel.nearbyEventsIsLoading
+                                        {
+                                            
+                                            HStack(spacing:0)
+                                            {
+                                               
+                                                Spacer()
+                                                ProgressView()
+                                                Spacer()
+                                                
+                                            }.frame(width: geo.size.width,height:200)
+                                            
+                                            
+                                        }else{
+                                            
+                                            LazyHStack(spacing:0)
+                                            {
+                                                
+                                                ForEach(self.eventViewModel.upcomingEvents)
+                                                {
+                                                    event in
+                                                    
+                                                    EventItemHView(width:geo.size.width * 0.7, event: event, eventViewModel: self.eventViewModel)
+                                                    
+                                                }
+                                                
+                                            }.padding(.vertical,16)
                                             
                                         }
                                         
                                     }
                                     
-                                }.padding(.horizontal,16)
-                                
-                                ScrollView(.horizontal,showsIndicators: false)
-                                {
-                                    
-                                    if self.eventViewModel.upcomingEventsIsLoading
-                                    {
-                                        
-                                        HStack
-                                        {
-                                            
-                                            Spacer()
-                                            ProgressView()
-                                            Spacer()
-                                            
-                                        }.frame(width: geo.size.width,height:200)
-                                        
-                                    }else{
-                                        
-                                        LazyHStack(spacing:0)
-                                        {
-                                            
-                                            ForEach(self.eventViewModel.upcomingEvents) { event in
-                                                
-                                                EventItemHView(width:geo.size.width * 0.7, event: event, eventViewModel: self.eventViewModel)
-                                                
-                                            }
-                                    
-                                        }.padding(.vertical,16)
-                                        
-                                        
-                                    }
-                                  
                                 }
-                                
-                                
                             }
                             
-                            VStack(spacing:4)
-                            {
-                                
-                                HStack
-                                {
-                                    
-                                    Text("Nearby You").font(.custom(Fonts.airbnbCereal_medium, size: 18)).foregroundColor(Style.black)
-                                    
-                                    Spacer()
-                                    
-                                    Button
-                                    {
-                                        
-                                        self.navToAllEvents = true
-                                        
-                                    }label: {
-                                        
-                                        HStack(spacing: 4)
-                                        {
-                                            
-                                            Text("See All").font(.custom(Fonts.airbnbCereal_book, size: 16)).foregroundColor(Style.grey4)
-                                            
-                                            Image("right-arrow-ic").resizable().scaledToFill().frame(width: 8,height: 8)
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                }.padding(.horizontal,16)
-                                
-                                ScrollView(.horizontal,showsIndicators: false)
-                                {
-                                    
-                                    
-                                    if self.eventViewModel.nearbyEventsIsLoading
-                                    {
-                                        
-                                        HStack(spacing:0)
-                                        {
-                                           
-                                            Spacer()
-                                            ProgressView()
-                                            Spacer()
-                                            
-                                        }.frame(width: geo.size.width,height:200)
-                                        
-                                        
-                                    }else{
-                                        
-                                        LazyHStack(spacing:0)
-                                        {
-                                            
-                                            ForEach(self.eventViewModel.upcomingEvents)
-                                            {
-                                                event in
-                                                
-                                                EventItemHView(width:geo.size.width * 0.7, event: event, eventViewModel: self.eventViewModel)
-                                                
-                                            }
-                                            
-                                        }.padding(.vertical,16)
-                                        
-                                    }
-                                    
-                                }
-                                
-                            }
                             
                         }.padding(.top,16)
                         
@@ -224,9 +232,15 @@ struct HomeView: View {
                 
                 self.eventViewModel.getAllUpcomingEvents()
                 self.eventViewModel.getAllNearbyEvents()
-
+                self.locationManager.requestLocationAuthorization()
+                
+            }.onReceive(self.locationManager.$lastUpdatedLocation)
+            {
+                coordinate in
+                
+                //print(coordinate)
+                
             }
-            
         }
 
     }

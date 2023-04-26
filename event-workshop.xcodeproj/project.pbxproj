@@ -39,6 +39,8 @@
 		07E6D8AD29EE175E0064FBEE /* TimeDateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6D8AC29EE175E0064FBEE /* TimeDateFilterView.swift */; };
 		07E7C61529F4C3FD0038B551 /* LocalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7C61429F4C3FD0038B551 /* LocalPreferences.swift */; };
 		07E7C61729F4E9300038B551 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7C61629F4E9300038B551 /* extensions.swift */; };
+		07E7C66429F88A160038B551 /* ErrorAlertViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7C66329F88A150038B551 /* ErrorAlertViewModifier.swift */; };
+		07E7C66629F8A6140038B551 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7C66529F8A6130038B551 /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		07E6D8AC29EE175E0064FBEE /* TimeDateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDateFilterView.swift; sourceTree = "<group>"; };
 		07E7C61429F4C3FD0038B551 /* LocalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPreferences.swift; sourceTree = "<group>"; };
 		07E7C61629F4E9300038B551 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		07E7C66329F88A150038B551 /* ErrorAlertViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewModifier.swift; sourceTree = "<group>"; };
+		07E7C66529F8A6130038B551 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 				07E4EEA329EB453700FCC76D /* Info.plist */,
 				07E4EE9329E9534B00FCC76D /* fonts */,
 				07E4EE7829E6B2E300FCC76D /* Data */,
+				07E4EE7B29E6B33B00FCC76D /* Model */,
 				07E4EE7929E6B2EA00FCC76D /* ViewModel */,
 				07E4EE7A29E6B31700FCC76D /* UI */,
 				07E4EE8729E8054000FCC76D /* Util */,
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				07E4EE8429E804F400FCC76D /* EventViewModel.swift */,
+				07E7C66529F8A6130038B551 /* LocationDataManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,7 +174,7 @@
 		07E4EE7A29E6B31700FCC76D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				07E4EE7B29E6B33B00FCC76D /* Model */,
+				07E7C66229F889FC0038B551 /* Modifiers */,
 				07E4EE8E29E80EA500FCC76D /* Widgets */,
 				07E4EE8029E803A400FCC76D /* HomeView.swift */,
 				07E4EE8229E803B200FCC76D /* EventDetailView.swift */,
@@ -231,6 +237,14 @@
 				07E4EE9529E9537D00FCC76D /* AirbnbCereal_W_Md.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		07E7C66229F889FC0038B551 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				07E7C66329F88A150038B551 /* ErrorAlertViewModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,11 +341,13 @@
 				071C3E0529F44A3B006BC75B /* PerformerImagesHView.swift in Sources */,
 				07E7C61529F4C3FD0038B551 /* LocalPreferences.swift in Sources */,
 				07E4EE8529E804F400FCC76D /* EventViewModel.swift in Sources */,
+				07E7C66429F88A160038B551 /* ErrorAlertViewModifier.swift in Sources */,
 				071C3E0129F34E92006BC75B /* PerformerItemView.swift in Sources */,
 				071C3DF629F22A30006BC75B /* EventService.swift in Sources */,
 				071C3DFF29F2DE92006BC75B /* Config.swift in Sources */,
 				07E4EE6529E6AE9A00FCC76D /* event_workshopApp.swift in Sources */,
 				076DE1CA29ED74A2002CC15C /* FilterEventView.swift in Sources */,
+				07E7C66629F8A6140038B551 /* LocationDataManager.swift in Sources */,
 				07E4EE8B29E8059000FCC76D /* Consts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +481,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "event-workshop/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To provide you with personalized and location-based services, our app requires access to your location when you use it";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -496,6 +513,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "event-workshop/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To provide you with personalized and location-based services, our app requires access to your location when you use it";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

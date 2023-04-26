@@ -73,7 +73,6 @@ class EventViewModel:ObservableObject
     }
     
     
-    
     func getSavedFilters()
     {
         

@@ -101,19 +101,10 @@ struct AllEventsView: View {
             
             Spacer()
                 
-        }.navigationBarBackButtonHidden(true).alert("Error occured", isPresented: $showErrorAlert, actions: { // 2
+        }.navigationBarBackButtonHidden(true).showErrorAlert(showAlert: self.$showErrorAlert, onRetryClicked: {
             
-            Button("Cancel", role: .cancel, action: {})
-            Button("Retry", action: {
-                
-                self.eventViewModel.getAllUpcomingEvents(page: 1, itemPerPage: 10)
-                
-            })
-
-        }, message: {
+            self.eventViewModel.getAllUpcomingEvents(page: 1, itemPerPage: 0)
             
-            Text("Something bad happened please try again later")
-
         }).onReceive(self.eventViewModel.$getAllUpcomingEventsState){
             newVal in
             
